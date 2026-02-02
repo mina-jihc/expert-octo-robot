@@ -14,7 +14,7 @@
         display: flex;
         align-items: center;
         color: white;
-        gap: 140px;
+        gap: 130px;
         margin-left: 100px;
       }
       .top-btns {
@@ -22,7 +22,6 @@
         flex-direction: column;
         gap: 15px;
         margin-top: -60px;
-        border-right: 2px solid rgb(191, 191, 191);
         padding: 4px;
       }
       .left-btns button {
@@ -41,7 +40,6 @@
         flex-direction: column;
         gap: 15px;
         margin-bottom: -60px;
-        border-right: 2px solid rgb(191, 191, 191);
         padding: 4px;
       }
       .search {
@@ -121,17 +119,18 @@
       }
       .actions {
         position: absolute;
-        top: 60px;
-        right: 40px;
+        top: 70px;
+        left: 190px;
+        width: 200px;
         display: none;
         flex-direction: column;
         gap: 10px;
-        border-radius: 10px;
+        border-radius: 14px;
         background-color: rgb(33, 33, 33);
         border: 1px solid rgb(107, 107, 107);
         padding: 10px;
         z-index: 10;
-        margin-right: 970px;
+        margin-right: 920px;
       }
       .actions.active {
         display: flex;
@@ -140,15 +139,16 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
-        text-align: center;
         color: white;
-        background-color: #1d1f1f;
         width: 500px;
         border-radius: 10px;
         align-items: center;
-        margin-left: 800px;
-        margin-top: -600px;
+        margin-left: 1150px;
+        margin-top: -750px;
         padding: 10px;
+      }
+      .whats {
+        display: flex;
       }
       .download button {
         background-color: hsl(120, 100%, 25%);
@@ -163,19 +163,69 @@
         border: 2px solid green;
         background-color: transparent;
       }
+      .actions2 {
+        position: absolute;
+        top: 80px;
+        right: -2140px;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 10px;
+        background-color: rgb(33, 33, 33);
+        border: 1px solid rgb(107, 107, 107);
+        padding: 10px;
+        z-index: 10;
+        margin-right: 970px;
+      }
+      .actions2.active {
+        display: flex;
+      }
+      .chatat {
+        display: flex;
+        align-items: center;
+      }
+      .lastsoz {
+        background-color: green;
+        color: white;
+        width: 600px;
+        margin-left: 1010px;
+        padding: 10px;
+        border-radius: 10px;
+        position: relative;
+      }
+      .pp {
+        position: absolute;
+        left: 1060px;
+        top: 726px;
+      }
+      .time {
+        position: absolute;
+        color: wheat;
+        left: 1580px;
+        top: 726px;
+      }
+      .time1 {
+         position: absolute;
+        color: wheat;
+        left: 1564px;
+        top: 455px;
+      }
+      input::placeholder {
+        color: white;
+      }
     </style>
   </head>
   <body>
-    <div class="left">
+    <div class="left" style="border-right: 1px solid rgb(60, 60, 60); width: 470px;">
       <div class="top">
         <h1>WhatsApp</h1>
         <div class="whats">
-          <img src="chat (2).png" alt="" width="25px" />
+          <img src="chat (2).png" alt="" width="30px" />
           <button
             class="menu"
             style="border: none; background-color: transparent; cursor: pointer"
           >
-            <img src="menu-dots-vertical.png" alt="" width="25px" />
+            <img src="menu-dots-vertical.png" alt="" width="30px" />
           </button>
         </div>
         <div class="actions">
@@ -222,6 +272,57 @@
             <p>Log out</p>
           </div>
         </div>
+        <div class="chatat">
+            <img src="f1fd3211-2d23-4bae-b99e-17421d8906f5.jpg" alt="" width="50px" height="50px" style="border-radius: 50px;">
+            <p class="number" style="margin-left: 10px; font-size: 20px;">+77752431177</p>
+            </div>
+        <div class="btnss" style="display: flex; margin-left: 580px; margin-top: 10px;">
+        <button style="border: none; background-color: transparent; cursor: pointer"><img src="phone.png" alt="" width="40px"></button>
+        <button style="border: none; background-color: transparent; cursor: pointer"><img src="video.png" alt="" width="45px"></button>
+        <button
+            class="menu2"
+            style="border: none; background-color: transparent; cursor: pointer"
+          >
+            <img src="menu-dots-vertical.png" alt="" width="35px"/>
+          </button>
+          </div>
+          <div class="actions2">
+            <div
+            class="action"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <img src="info.png" alt="" width="25px" />
+            <p>Contact Info</p>
+          </div>
+          <div
+            class="action"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <img src="check (2).png" alt="" width="25px" />
+            <p>Select messsages</p>
+          </div>
+          <div
+            class="action"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <img src="clock (1).png" alt="" width="25px" />
+            <p>Disappearing messages</p>
+          </div>
+          <div
+            class="action"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <img src="close.png" alt="" width="25px" />
+            <p>Close chat</p>
+          </div>
+          <div
+            class="action"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <img src="bin.png" alt="" width="25px" />
+            <p>Delete chat</p>
+          </div>
+          </div>
       </div>
       <div class="left-btns">
         <div class="top-btns">
@@ -375,21 +476,37 @@
       </div>
     </div>
     <div class="download">
-      <img src="whatsa.png" alt="" width="300px" />
-      <p style="font-size: 30px">Download WhatsApp for<br />Windows</p>
-      <p>
-        Make calls, share your screen and get a faster<br />experience when you
-        download the windows<br />app
-      </p>
-      <button>Download</button>
+        <img src="f1fd3211-2d23-4bae-b99e-17421d8906f5.jpg" width="400px" style="border: 4px solid green; border-radius: 10px;">
+        <p class="time1">10:00</p>
+      </div>
+      <p class="lastsoz">Ауызша қорғауға арналған мәтінmz
+
+Құрметті оқытушы және тыңдаушылар!
+Бүгін мен сіздерге «Құндылықтар философиясы. Адамгершілік бастаулары» тақырыбында баяндама ұсынамын.
+
+Бұл тақырып қазіргі қоғам үшін өте маңызды, себебі адам өмірінің мәні, оның мінез-құлқы мен таңдауы тікелей құндылықтар жүйесіне байланысты.
+
+Алдымен құндылықтар философиясы деген ұғымға тоқталсақ. Құндылықтар философиясы немесе аксиология – адамның нені маңызды, қадірлі және мағыналы деп санайтынын зерттейтін философия саласы. Яғни, бұл ғылым «адам не үшін өмір сүреді?», «өмірдің мәні неде?» деген сұрақтарға жауап іздейді.
+
+Адам кез келген шешімді қабылдағанда өз құндылықтарына сүйенеді. Мысалы, бір адам үшін адалдық маңызды болса, ол қиын жағдайда да шындықты айтады, ал екінші адам үшін мат</p>
+<p class="pp" style="color: rgb(0, 255, 0);">Read more</p>
+<p class="time">10:21</p>
+<div class="message" style="display: flex; align-items: center; margin-left: 490px; gap: 10px;">
+    <input type="text" placeholder="+     Type a message" style="width: 1100px;">
+    <img src="paper-plane.png" width="20px" height="20px">
     </div>
     <script>
       const actions = document.querySelector(".actions");
       const menu = document.querySelector(".menu");
+      const menu2 = document.querySelector(".menu2");
+      const actions2 = document.querySelector(".actions2")
 
       menu.addEventListener("click", function () {
-        actions.classList.add("active");
+        actions.classList.toggle("active");
       });
+      menu2.addEventListener("click", function() {
+        actions2.classList.toggle("active");
+      })
     </script>
   </body>
 </html>
