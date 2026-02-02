@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WhatsApp</title>
+    <style>
+      body {
+        background-color: rgba(15, 14, 14, 0.97);
+        font-family: sans-serif;
+      }
+      .top {
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: white;
+        gap: 140px;
+        margin-left: 100px;
+      }
+      .top-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: -60px;
+        border-right: 2px solid rgb(191, 191, 191);
+        padding: 4px;
+      }
+      .left-btns button {
+        background-color: transparent;
+        cursor: pointer;
+        width: 30px;
+        border: none;
+      }
+      .left-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 400px;
+      }
+      .bttm-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: -60px;
+        border-right: 2px solid rgb(191, 191, 191);
+        padding: 4px;
+      }
+      .search {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: -620px;
+        margin-left: 100px;
+      }
+      input {
+        width: 350px;
+        padding: 12px;
+        border-radius: 18px;
+        border: none;
+        background-color: rgb(98, 98, 98);
+        color: white;
+      }
+      .all {
+        display: flex;
+        gap: 8px;
+      }
+      .all button {
+        background-color: transparent;
+        padding: 10px;
+        border-radius: 16px;
+        border: 1px solid gray;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .all button:hover {
+        background-color: gray;
+      }
+      .allb {
+        background-color: green;
+      }
+      .archive {
+        display: flex;
+        gap: 28px;
+        color: white;
+        align-items: center;
+        margin-left: 110px;
+        margin-top: 20px;
+      }
+      .p16 {
+        margin-left: 160px;
+      }
+      .chats {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 100px;
+        margin-top: 20px;
+      }
+      .chat {
+        display: flex;
+        gap: 10px;
+        color: white;
+        align-items: center;
+      }
+      .name {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .tick {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-top: -20px;
+      }
+      .date {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-bottom: 10px;
+      }
+      .actions {
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 10px;
+        background-color: rgb(33, 33, 33);
+        border: 1px solid rgb(107, 107, 107);
+        padding: 10px;
+        z-index: 10;
+        margin-right: 970px;
+      }
+      .actions.active {
+        display: flex;
+      }
+      .download {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        color: white;
+        background-color: #1d1f1f;
+        width: 500px;
+        border-radius: 10px;
+        align-items: center;
+        margin-left: 800px;
+        margin-top: -600px;
+        padding: 10px;
+      }
+      .download button {
+        background-color: hsl(120, 100%, 25%);
+        border: none;
+        color: hsl(100, 100%, 65%);
+        font-weight: 800;
+        border-radius: 18px;
+        padding: 8px;
+        cursor: pointer;
+      }
+      .download button:hover {
+        border: 2px solid green;
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      <div class="top">
+        <h1>WhatsApp</h1>
+        <div class="whats">
+          <img src="chat (2).png" alt="" width="25px" />
+          <button
+            class="menu"
+            style="border: none; background-color: transparent; cursor: pointer"
+          >
+            <img src="menu-dots-vertical.png" alt="" width="25px" />
+          </button>
+        </div>
+        <div class="actions">
+          <div
+            class="action"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <img src="people.png" alt="" width="25px" />
+            <p>New group</p>
+          </div>
+          <div
+            class="action"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <img src="check (2).png" alt="" width="25px" />
+            <p>Select chats</p>
+          </div>
+          <div
+            class="action"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <img src="star (2).png" alt="" width="25px" />
+            <p>Starred messsages</p>
+          </div>
+          <div
+            class="action"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <img src="chat.png" alt="" width="25px" />
+            <p>Mark all as read</p>
+          </div>
+          <div
+            class="action"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <img src="padlock.png" alt="" width="25px" />
+            <p>App lock</p>
+          </div>
+          <div
+            class="action"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <img src="logout.png" alt="" width="25px" />
+            <p>Log out</p>
+          </div>
+        </div>
+      </div>
+      <div class="left-btns">
+        <div class="top-btns">
+          <button><img src="chat.png" width="30px" /></button>
+          <button><img src="messenger (1).png" width="30px" /></button>
+          <button><img src="voice-chat.png" width="30px" /></button>
+          <button><img src="people.png" width="30px" /></button>
+        </div>
+        <div class="bttm-btns">
+          <button><img src="image.png" width="30px" /></button>
+          <button><img src="setting (1).png" width="30px" /></button>
+          <button>
+            <img
+              src="f1fd3211-2d23-4bae-b99e-17421d8906f5.jpg"
+              width="35px"
+              height="35px"
+              style="border-radius: 50px"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="search">
+        <input type="search" placeholder="Search or start a new chat" />
+        <div class="all">
+          <button class="allb">All</button>
+          <button>Unread</button>
+          <button>Favourites</button>
+          <button>Groups</button>
+        </div>
+      </div>
+      <div class="archive">
+        <img src="archive.png" alt="" width="30px" height="30px" />
+        <p>Archived</p>
+        <p class="p16">16</p>
+      </div>
+      <div class="chats">
+        <div class="chat">
+          <img
+            src="f1fd3211-2d23-4bae-b99e-17421d8906f5.jpg"
+            width="50px"
+            height="50px"
+            style="border-radius: 50px"
+          />
+          <div class="name">
+            <p style="font-size: 18px">+7 775 243 1177 (You)</p>
+            <div class="tick">
+              <img src="tick.png" alt="" width="20px" height="20px" />
+              <p>87472309223</p>
+            </div>
+          </div>
+          <div class="date">
+            <p>Tuesday</p>
+            <img src="pin.png" alt="" width="20px" height="20px" />
+          </div>
+        </div>
+        <div class="chat">
+          <img
+            src="bir.jpg"
+            width="50px"
+            height="50px"
+            style="border-radius: 50px"
+          />
+          <div class="name">
+            <p style="font-size: 18px">Developing</p>
+            <div class="tick">
+              <img src="tick.png" alt="" width="20px" height="20px" />
+              <p>Yoy: https:drive.goo...</p>
+            </div>
+          </div>
+          <div class="date">
+            <p>22:52</p>
+            <img src="pin.png" alt="" width="20px" height="20px" />
+          </div>
+        </div>
+        <div class="chat">
+          <img
+            src="f1fd3211-2d23-4bae-b99e-17421d8906f5.jpg"
+            width="50px"
+            height="50px"
+            style="border-radius: 50px"
+          />
+          <div class="name">
+            <p style="font-size: 18px">Aliya Apke</p>
+            <div class="tick">
+              <img src="tick.png" alt="" width="20px" height="20px" />
+              <p>Salem. Ok</p>
+            </div>
+          </div>
+          <div class="date">
+            <p>18:48</p>
+            <img src="pin.png" alt="" width="20px" height="20px" />
+          </div>
+        </div>
+        <div class="chat">
+          <img
+            src="93813fe30b4e238a7649241965fb10ae.jpg"
+            width="50px"
+            height="50px"
+            style="border-radius: 50px"
+          />
+          <div class="name">
+            <p style="font-size: 18px">Kiraboshi</p>
+            <div class="tick">
+              <img src="tick.png" alt="" width="20px" height="20px" />
+              <p>Nu i ladno</p>
+            </div>
+          </div>
+          <div class="date">
+            <p>22:52</p>
+            <img src="pin.png" alt="" width="20px" height="20px" />
+          </div>
+        </div>
+        <div class="chat">
+          <img
+            src="05d9cd65450a18c4327a73cc859a9398.jpg"
+            width="50px"
+            height="50px"
+            style="border-radius: 50px"
+          />
+          <div class="name">
+            <p style="font-size: 18px">Cennetim</p>
+            <div class="tick">
+              <img src="tick.png" alt="" width="20px" height="20px" />
+              <p>You reacted to</p>
+            </div>
+          </div>
+          <div class="date">
+            <p>10:34</p>
+            <img src="pin.png" alt="" width="20px" height="20px" />
+          </div>
+        </div>
+        <div class="chat">
+          <img
+            src="2f107905333a60651da1fd7ed412ef6a.jpg"
+            width="50px"
+            height="50px"
+            style="border-radius: 50px"
+          />
+          <div class="name">
+            <p style="font-size: 18px">Guli</p>
+            <div class="tick">
+              <img src="tick.png" alt="" width="20px" height="20px" />
+              <p>Sticker</p>
+            </div>
+          </div>
+          <div class="date">
+            <p>1/18/2026</p>
+            <img src="pin.png" alt="" width="20px" height="20px" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="download">
+      <img src="whatsa.png" alt="" width="300px" />
+      <p style="font-size: 30px">Download WhatsApp for<br />Windows</p>
+      <p>
+        Make calls, share your screen and get a faster<br />experience when you
+        download the windows<br />app
+      </p>
+      <button>Download</button>
+    </div>
+    <script>
+      const actions = document.querySelector(".actions");
+      const menu = document.querySelector(".menu");
+
+      menu.addEventListener("click", function () {
+        actions.classList.add("active");
+      });
+    </script>
+  </body>
+</html>
